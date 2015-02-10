@@ -2,6 +2,7 @@ import urllib
 import json
 import collections
 import sys
+import testing
 
 filename = sys.argv[1]
 file = open("out.txt", "w")
@@ -12,22 +13,28 @@ with open(filename) as f:
         tweets.append(json.loads(line))
 
 frequency_map = {}
+
+awards_list = [line.strip() for line in open('AwardsList.txt')]
+awardTable = {}
+
 for index, text in enumerate(tweets[0]):
-	file.write ("Current Tweet %s: %s" % (index, text))
-	word_array = text['text'].split(" ")
-	for word in word_array:
-		if frequency_map.has_key(word):
-			frequency_map[word] += 1
-		else:
-			frequency_map[word] = 1
+    file.write ("Current Tweet %s: %s" % (index, text))
+    
+    testing.run_tests(frequency_map, awards_list, text,awardTable)
+
+testing.processAwards(awardTable)
 
 freq_list = sorted(frequency_map, key=frequency_map.get, reverse=True)
 
+freqFile = open("freqencymap.txt","w")
+
 for i in freq_list[:100]:
-	file.write( "%s frequency: %s occurences" % (i, str(frequency_map[i])))
+    freqFile.write( "%s frequency: %s occurences\n" % (i, str(frequency_map[i])))
 
 print("Done!")
 file.close()
+freqFile.close()
 
 
 
+    
