@@ -15,14 +15,16 @@ with open(filename) as f:
 frequency_map = {}
 
 awards_list = [line.strip() for line in open('AwardsList.txt')]
-awardTable = {}
+award_table = {}
+host_table = {}
 
 for index, text in enumerate(tweets[0]):
     file.write ("Current Tweet %s: %s" % (index, text))
     
-    testing.run_tests(frequency_map, awards_list, text,awardTable)
+    testing.run_tests(frequency_map, awards_list, text, host_table, award_table)
 
-testing.processAwards(awardTable)
+testing.processAwards(award_table)
+testing.processHosts(host_table)
 
 freq_list = sorted(frequency_map, key=frequency_map.get, reverse=True)
 

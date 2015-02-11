@@ -1,10 +1,10 @@
-﻿Best Motion Picture Drama
-Best Motion Picture Musical or Comedy
+﻿Best Drama
+Best Musical or Comedy
 Best Director
-Best Actor Motion Picture Drama
-Best Actor Motion Picture Musical or Comedy
-Best Actress Motion Picture Drama
-Best Actress Motion Picture Musical or Comedy
+Best Actor Drama
+Best Actor Musical or Comedy
+Best Actress Drama
+Best Actress Musical or Comedy
 Best Supporting Actor Motion Picture
 Best Supporting Actress Motion Picture
 Best Screenplay
