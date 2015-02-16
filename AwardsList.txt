@@ -1,26 +1,26 @@
-﻿Best Drama
-Best Musical or Comedy
-Best Director
-Best Actor Drama
-Best Actor Musical or Comedy
-Best Actress Drama
-Best Actress Musical or Comedy
-Best Supporting Actor Motion Picture
-Best Supporting Actress Motion Picture
-Best Screenplay
-Best Original Score
-Best Original Song
-Best Foreign Language Film
-Best Animated Feature Film
-Cecil B. DeMille Award
-Best Drama Series
-Best Comedy Series
-Best Actor TV Drama Series
-Best Actor TV Comedy Series
-Best Actress TV Drama Series
-Best Actress TV Comedy Series
-Best Limited Series 
-Best Actor Limited Series 
-Best Actress Limited Series
-Best Supporting Actor Series
-Best Supporting Actress Series
+﻿best drama
+best musical or comedy
+best director
+best actor drama
+best actor musical or comedy
+best actress drama
+best actress musical or comedy
+best supporting actor motion picture
+best supporting actress motion picture
+best screenplay
+best score
+best song
+best foreign language 
+best animated feature 
+cecil b. demille award
+best drama 
+best comedy 
+best actor tv drama 
+best actor tv comedy 
+best actress tv drama 
+best actress tv comedy 
+best limited series 
+best actor limited series 
+best actress limited series
+best supporting actor series
+best supporting actress series
