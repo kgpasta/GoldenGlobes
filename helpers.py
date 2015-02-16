@@ -27,3 +27,19 @@ def parseNomineeTable(filename):
 
     nomineeFile.close()            
     return nominees
+    
+def parsePresenterList(filename):
+    presenterFile = open(filename)
+    presenters = {}
+    award = "new"
+    for line in presenterFile:
+        if len(line.strip()) == 0:
+            award = "new"
+        elif award == "new":
+            presenters[line.strip()] = []
+            award = line.strip()
+        else:
+            presenters[award].append(line.strip().lower())
+            
+    presenterFile.close()
+    return presenters

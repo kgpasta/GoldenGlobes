@@ -17,8 +17,8 @@ frequency_map = {}
 
 awards_list = [line.strip() for line in open('AwardsList.txt')]
 stop_list = [line.strip() for line in open('stoplist.txt')]
-#presenter_list = helpers.parsePresenters('PresenterList2013.txt')
-nominee_table = helpers.parseNomineeTable('NomineeList2015Structured.txt')
+presenter_list = helpers.parsePresenterList('PresenterList2013Structured.txt')
+nominee_table = helpers.parseNomineeTable('NomineeList2013Structured.txt')
 nominee_list = helpers.parseNominees(nominee_table)
 award_table = {}
 host_table = {}
