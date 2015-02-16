@@ -6,6 +6,7 @@ import testing
 import helpers
 
 filename = sys.argv[1]
+year = sys.argv[2]
 file = open("out.txt", "w")
 
 tweets = []
@@ -17,8 +18,14 @@ frequency_map = {}
 
 awards_list = [line.strip() for line in open('AwardsList.txt')]
 stop_list = [line.strip() for line in open('stoplist.txt')]
-presenter_list = helpers.parsePresenterList('PresenterList2013Structured.txt')
-nominee_table = helpers.parseNomineeTable('NomineeList2013Structured.txt')
+
+if year == "13":    
+    presenter_list = helpers.parsePresenterList('PresenterList2013Structured.txt')
+    nominee_table = helpers.parseNomineeTable('NomineeList2013Structured.txt')
+else:
+    presenter_list = helpers.parsePresenterList('PresenterList2015Structured.txt')
+    nominee_table = helpers.parseNomineeTable('NomineeList2015Structured.txt')
+    
 nominee_list = helpers.parseNominees(nominee_table)
 award_table = {}
 host_table = {}
