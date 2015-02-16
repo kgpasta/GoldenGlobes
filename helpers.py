@@ -5,15 +5,11 @@ Created on Mon Feb 16 00:41:32 2015
 @author: Kaustubh
 """
 
-def parseNominees(filename):
-    nomineeFile = open(filename)
+def parseNominees(nomineeTable):
     nominees = []
-    for line in nomineeFile:
-        nominee = line.strip().lower()
-        if nominee not in nominees:
-            nominees.append(nominee)
-
-    nomineeFile.close()            
+    for key in nomineeTable.iterkeys():
+        nominees = nominees + nomineeTable[key]
+        
     return nominees
     
 def parseNomineeTable(filename):
