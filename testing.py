@@ -17,7 +17,7 @@ def run_tests(frequency_map, keyword_list, stop_list, tweet, host_table, nominee
         
     matches = re.findall(proper_noun_regex,tweet['text'])
     for match in matches:
-        match = match.strip().lower()
+        match = str(match.strip().lower())
         if match not in stop_list and match in nominee_table:
             if match in award_table:
                 award_table[match] = award_table[match] + 1
