@@ -33,13 +33,14 @@ def parsePresenterList(filename):
     presenters = {}
     award = "new"
     for line in presenterFile:
-        if len(line.strip()) == 0:
+        line = line.strip().encode('ascii','ignore')
+        if len(line) == 0:
             award = "new"
         elif award == "new":
-            presenters[line.strip()] = []
-            award = line.strip()
+            presenters[line] = []
+            award = line
         else:
-            presenters[award].append(line.strip().lower())
+            presenters[award].append(line.lower())
             
     presenterFile.close()
     return presenters
