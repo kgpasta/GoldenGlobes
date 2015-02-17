@@ -1,60 +1,60 @@
-Best Drama
+Best Motion Picture - Drama
 Argo
 Django Unchained
 Life of Pi
 Lincoln
 Zero Dark Thirty
 
-Best Musical/Comedy
+Best Motion Picture - Motion Picture
 The Best Exotic Marigold Hotel
 Les Miserables
 Moonrise Kindgom
 Salmon Fishing in the Yemen
 Silver Linings Playbook
 
-Best Director
+Best Director - Motion Picture
 Ben Affleck
 Kathryn Bigelow
 Ang Lee
 Steven Spielberg
 Quentin Tarantino
 
-Best Actress in a Drama
+Best Actress in a Drama - Motion Picture
 Jessica Chastain
 Marion Cotillard
 Helen Mirren
 Naomi Watts
 Rachel Weisz
 
-Best Actor in a Drama
+Best Actor in a Drama - Motion Picture
 Daniel Day-Lewis
 Richard Gere
 John Hawkes
 Joaquin Phoenix
 Denzel Washington
 
-Best Actor in a Musical or Comedy
+Best Actor in a Motion Picture - Musical or Comedy
 Jack Black
 Bradley Cooper
 Hugh Jackman
 Ewan McGregor
 Bill Murray
 
-Best Actress in a Musical or Comedy
+Best Actress in a Motion Picture - Musical or Comedy
 Emily Blunt
 Judi Dench
 Jennifer Lawrence
 Maggie Smith
 Meryl Streep
 
-Best Supporting Actress 
+Best Supporting Actress - Motion Picture
 Amy Adams
 Sally Field
 Anne Hathaway
 Helen Hunt
 Nicole Kidman
 
-Best Supporting Actor
+Best Supporting Actor - Motion Picture
 Alan Arkin
 Leonardo DiCaprio
 Philip Seymour Hoffman
@@ -75,7 +75,7 @@ The Intouchables
 Kon-Tiki
 Rust and Bone
 
-Best Animated Feature
+Best Animated Feature Film
 Rise of the Guardians
 Brave
 Frankenweenie
@@ -96,77 +96,77 @@ Anna Karenina
 Cloud Atlas 
 Lincoln
 
-Best TV Comedy or Musical
+Best Television Series - Comedy or Musical
 The Big Bang Theory
 Episodes
 Girls
 Modern Family
 Smash
 
-Best TV Drama 
+Best Television Series - Drama 
 Breaking Bad
 Boardwalk Empire
 Downton Abbey
 Homeland
 The Newsroom
 
-Best Actress in a TV Drama
+Best Actress in a Television Series - Drama
 Connie Britton
 Glenn Close
 Claire Danes
 Michelle Dockery
 Julianna Margulies
 
-Best Actor in a TV Drama 
+Best Actor in a Television Series - Drama 
 Steve Buscemi
 Bryan Cranston
 Jeff Daniels
 Jon Hamm
 Damian Lewis
 
-Best Actress in a TV Comedy
+Best Actress in a Television Series - Comedy
 Zooey Deschanel
 Julia Louis-Dreyfus
 Lena Dunham
 Tina Fey
 Amy Poehler
 
-Best Actor in a TV Comedy
+Best Actor in a Television Series - Comedy
 Alec Baldwin
 Don Cheadle
 Louis C.K.
 Matt LeBlanc
 Jim Parsons
 
-Best Miniseries or TV Movie
+Best Miniseries or Television Film
 Game Change
 The Girl
 Hatfields & McCoys
 The Hour
 Political Animals
 
-Best Actress in a Miniseries or TV Movie
+Best Actress - Miniseries or Television Film
 Nicole Kidman
 Jessica Lange
 Sienna Miller
 Julianne Moore
 Sigourney Weaver
 
-Best Actor in a Miniseries or TV Movie
+Best Actor - Miniseries or Television Film
 Kevin Costner
 Benedict Cumberbatch
 Woody Harrelson
 Toby Jones
 Clive Owen
 
-Best Supporting Actress in a TV Show
+Best Supporting Actress in a Series, Miniseries, or Television Film
 Hayden Panettiere
 Archie Panjabi
 Sarah Paulson
 Maggie Smith
 Sofia Vergara
 
-Best Supporting Actor in a TV Show
+Best Supporting Actor in a Series, Miniseries, or Television Film
 Max Greenfield
 Ed Harris
 Danny Huston
