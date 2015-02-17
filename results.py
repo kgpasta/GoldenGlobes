@@ -5,10 +5,10 @@ import sys
 import testing
 import helpers
 
-def process(hosts, winners, nominee_table, nominee_list, presenter_list):
+def process(year, hosts, winners, nominee_table, nominee_list, presenter_list):
     results = {
         "metadata": {
-            "year": 2013,
+            "year": year,
             "hosts": {
                 "method": "",
                 "method_description": ""
@@ -50,12 +50,14 @@ def process(hosts, winners, nominee_table, nominee_list, presenter_list):
         results["data"]["structured"][key] = award
         winnerList.append(winners[key])
         awardsList.append(key)
-        presenterList.append(presenter_list[key])
+        if key in presenter_list:
+            for value in presenter_list[key]:
+                presenterList.append(value)
 
     results["data"]["unstructured"]["winners"] = winnerList
     results["data"]["unstructured"]["awards"] = awardsList
     results["data"]["unstructured"]["awards"] = presenterList
 
-    out_file = open('results.json', 'w')
+    out_file = open('results' + year + '.json', 'w')
     json.dump(results, out_file)
     out_file.close()

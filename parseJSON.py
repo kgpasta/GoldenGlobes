@@ -19,10 +19,11 @@ frequency_map = {}
 awards_list = [line.strip() for line in open('AwardsList.txt')]
 stop_list = [line.strip() for line in open('stoplist.txt')]
 
-if year == "13":    
+if year == "2013":
     presenter_list = helpers.parsePresenterList('PresenterList2013Structured.txt')
     nominee_table = helpers.parseNomineeTable('NomineeList2013Structured.txt')
 else:
+    year = "2015"
     presenter_list = helpers.parsePresenterList('PresenterList2015Structured.txt')
     nominee_table = helpers.parseNomineeTable('NomineeList2015Structured.txt')
     
@@ -46,8 +47,7 @@ winners = testing.processNominees(award_table,nominee_table)
 
 print("Done!")
 file.close()
-print(presenter_list)
-results.process(hosts, winners, nominee_table, nominee_list, presenter_list)
+results.process(year, hosts, winners, nominee_table, nominee_list, presenter_list)
 #freqFile.close()
 
 
