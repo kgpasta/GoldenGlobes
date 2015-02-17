@@ -42,6 +42,7 @@ def findHosts(tweet, table):
             table[match] = 1
             
 def processNominees(mention_table,  nominee_table):
+    winners = {}
     for key in nominee_table.iterkeys():
         maxMentions = 0
         winner = None
@@ -49,8 +50,9 @@ def processNominees(mention_table,  nominee_table):
             if nominee in mention_table and mention_table[nominee] > maxMentions:
                 maxMentions = mention_table[nominee]
                 winner = nominee
-        
+        winners[key] = winner
         print key + " : " + winner
+    return winners
         
 def processHosts(table):
     sortedTable = sorted(table.iterkeys(), key=lambda x: table[x])
