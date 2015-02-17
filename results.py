@@ -47,6 +47,8 @@ def process(year, hosts, winners, nominee_table, nominee_list, presenter_list):
         award = {}
         award["winner"] = winners[key]
         award["nominees"] = nominee_table[key]
+        if key in presenter_list:
+            award["presenters"] = presenter_list[key]
         results["data"]["structured"][key] = award
         winnerList.append(winners[key])
         awardsList.append(key)
