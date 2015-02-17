@@ -7,15 +7,15 @@ Created on Tue Feb 17 01:00:58 2015
 import json
 
 
-def main():
+def main(filename):
     results = None
     
-    with open("gg2013answers.json") as f:
+    with open(filename) as f:
         for line in f:
             results = json.loads(line)
             
-    lists = results["unstructured"]
-    dicts = results["structured"]
+    lists = results["data"]["unstructured"]
+    dicts = results["data"]["structured"]
     
     while(True):
         command = raw_input("\nEnter Command: ")
@@ -60,4 +60,4 @@ def findAward(command, dicts):
         
         
 
-main()
+main(sys.argv[1])
