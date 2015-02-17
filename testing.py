@@ -59,6 +59,8 @@ def processHosts(table):
     host1 = sortedTable[len(sortedTable) - 1]
     host2 = sortedTable[len(sortedTable) - 2]
     print "Hosts: " + host1.lower() + " , " + host2.lower()
+    hosts = [host1, host2]
+    return hosts
    
 #def populateTable(tweet, award, nominee_list, table, stop_list):
 #    matches = re.findall(proper_noun_regex, tweet)
