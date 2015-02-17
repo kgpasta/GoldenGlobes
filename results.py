@@ -10,19 +10,19 @@ def process(year, hosts, winners, nominee_table, nominee_list, presenter_list):
         "metadata": {
             "year": year,
             "hosts": {
-                "method": "",
-                "method_description": ""
+                "method": "detected",
+                "method_description": "Regular expressions searching for hosts name's within tweets."
                 },
             "nominees": {
-                "method": "",
+                "method": "hardcoded",
                 "method_description": ""
                 },
             "awards": {
-                "method": "",
+                "method": "hardcoded",
                 "method_description": ""
                 },
             "presenters": {
-                "method": "",
+                "method": "hardcoded",
                 "method_description": ""
                 }
             },
@@ -56,7 +56,7 @@ def process(year, hosts, winners, nominee_table, nominee_list, presenter_list):
 
     results["data"]["unstructured"]["winners"] = winnerList
     results["data"]["unstructured"]["awards"] = awardsList
-    results["data"]["unstructured"]["awards"] = presenterList
+    results["data"]["unstructured"]["presenters"] = presenterList
 
     out_file = open('results' + year + '.json', 'w')
     json.dump(results, out_file)
