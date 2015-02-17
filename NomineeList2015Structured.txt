@@ -1,60 +1,60 @@
-Best Drama
+Best Motion Picture - Drama
 Boyhood
 Foxcatcher
 The Imitation Game
 Selma
 The Theory of Everything
 
-Best Comedy
+Best Motion Picture - Musical or Comedy
 Birdman
 The Grand Budapest Hotel
 Into the Woods
 Pride
 St. Vincent
 
-Best Director
+Best Director - Motion Picture
 Wes Anderson
 Ava Duvernay
 David Fincher
 Alejandro González Iñárritu
 Richard Linklater
 
-Best Actress in a Drama
+Best Actress in a Drama - Motion Picture
 Jennifer Aniston
 Felicity Jones
 Julianne Moore
 Rosamund Pike
 Reese Witherspoon
 
-Best Actor in a Drama
+Best Actor in a Motion Picture - Drama
 Steve Carell
 Benedict Cumberbatch
 Jake Gyllenhaal
 David Oyelowo
 Eddie Redmayne
 
-Best Actor in a Musical or Comedy
+Best Actor in a Motion Picture - Musical or Comedy
 Ralph Fiennes
 Michael Keaton
 Bill Murray
 Joaquin Phoenix
 Christoph Waltz
 
-Best Actress in a Musical or Comedy
+Best Actress in a Motion Picture - Musical or Comedy
 Amy Adams
 Emily Blunt
 Helen Mirren
 Julianne Moore
 Quvenzhané Wallis
 
-Best Supporting Actress
+Best Supporting Actress - Motion Picture
 Patricia Arquette
 Jessica Chastain
 Keira Knightley
 Emma Stone
 Meryl Streep
 
-Best Supporting Actor
+Best Supporting Actor - Motion Picture
 Robert Duvall
 Ethan Hawke
 Edward Norton
@@ -68,14 +68,14 @@ Birdman
 Boyhood
 The Imitation Game
 
-Best Foreign Language Film
+Best Foreign Language Film 
 Force Majeure Turist
 Gett: The Trial of Viviane Ansalem Gett
 Ida
 Leviathan
 Tangerines Mandariinid
 
-Best Animated Feature
+Best Animated Feature Film
 Big Hero 6
 The Book of Life
 The Boxtrolls
@@ -89,42 +89,42 @@ Noah
 Annie
 The Hunger Games Mockingjay Part 1
 
-Best Score
+Best Original Score
 The Imitation Game
 The Theory of Everything
 Gone Girl
 Birdman
 Interstellar
 
-Best TV Comedy or Musical
+Best Television Series - Comedy or Musical
 Girls
 Jane the Virgin
 Orange Is the New Black
 Silicon Valley
 Transparent
 
-Best TV Drama
+Best Television Series - Drama
 The Affair
 Downton Abbey
 Game of Thrones
 The Good Wife
 House of Cards
 
-Best Actress in a TV Drama
+Best Actress in a Television Series - Drama
 Claire Danes
 Viola Davis
 Julianna Margulies
 Ruth Wilson
 Robin Wright
 
-Best Actor in a TV Drama
+Best Actor in a Television Series - Drama
 Clive Owen
 Liev Schreiber
 Kevin Spacey
 James Spader
 Dominic West
 
-Best Actress in a TV Comedy
+Best Actress in a Television Series - Comedy
 Lena Dunham
 Edie Falco
 Julia Louis-Dreyfus

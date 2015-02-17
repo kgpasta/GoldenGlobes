@@ -50,9 +50,10 @@ def process(year, hosts, winners, nominee_table, nominee_list, presenter_list):
         results["data"]["structured"][key] = award
         winnerList.append(winners[key])
         awardsList.append(key)
-        if key in presenter_list:
-            for value in presenter_list[key]:
-                presenterList.append(value)
+    for key in presenter_list:
+        for value in presenter_list[key]:
+            presenterList.append(value)
+
 
     results["data"]["unstructured"]["winners"] = winnerList
     results["data"]["unstructured"]["awards"] = awardsList
