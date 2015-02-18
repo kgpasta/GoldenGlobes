@@ -6,9 +6,9 @@ import testing
 import helpers
 
 def process(year, hosts, winners, nominee_table, nominee_list, presenter_list):
-    [x.encode('utf-8') for x in winners]
-    [x.encode('utf-8') for x in nominee_list]
-    [x.encode('utf-8') for x in presenter_list]
+    #[x.decode('utf_8').encode('ascii') for x in winners]
+    [x.decode('utf_8') for x in nominee_list]
+    #[x.decode('utf_8').encode('ascii') for x in presenter_list]
     results = {
         "metadata": {
             "year": year,

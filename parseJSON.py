@@ -31,14 +31,17 @@ nominee_list = helpers.parseNominees(nominee_table)
 award_table = {}
 host_table = {}
 special_table = {}
+joke_table = {}
 
 for index, text in enumerate(tweets[0]):
     file.write ("Current Tweet %s: %s" % (index, text))
-    testing.run_tests(frequency_map, special_table, stop_list, text, host_table, nominee_list, award_table)
+    testing.run_tests(frequency_map, special_table, stop_list, text, host_table, nominee_list, award_table, joke_table)
 
 hosts = testing.processHosts(host_table)
 winners = testing.processNominees(award_table,nominee_table)
 testing.processSpecial(winners, special_table)
+
+testing.extractTopJokes(joke_table)
 
 #freq_list = sorted(frequency_map, key=frequency_map.get, reverse=True)
 #

@@ -19,7 +19,7 @@ David Fincher
 Alejandro González Iñárritu
 Richard Linklater
 
-Best Actress in a Drama - Motion Picture
+Best Actress in a Motion Picture - Drama
 Jennifer Aniston
 Felicity Jones
 Julianne Moore
@@ -124,9 +124,51 @@ Kevin Spacey
 James Spader
 Dominic West
 
-Best Actress in a Television Series - Comedy
+Best Actress in a Television Series - Comedy or Musical
 Lena Dunham
 Edie Falco
 Julia Louis-Dreyfus
 Gena Rodriguez
 Taylor Schilling
+
+Best Actress - Miniseries or Television Film
+Maggie Gyllenhaal
+Jessica Lange
+Frances McDormand
+Frances O’Connor
+Allison Tolman
+
+Best Supporting Actress - Series, Miniseries or Television Film
+Uzo Aduba
+Kathy Bates
+Joanne Froggatt
+Allison Janney
+Michelle Monaghan
+
+Best Actor in a Television Series - Comedy or Musical
+Louis CK
+Don Cheadle
+Ricky Gervais
+William H Macy
+Jefferey Tambor
+
+Best Supporting Actor - Series, Miniseries or Television Film
+Matt Bomer
+Alan Cumming
+Colin Hanks
+Bill Murray
+Jon Voight
+
+Best Miniseries or Television Film
+Fargo 
+The Missing
+The Normal Heart
+Olive Kitteridge
+True Detective
+
+Best Actor - Miniseries or Television Film
+Martin Freeman
+Woody Harrelson
+Matthew McConaughey
+Mark Ruffalo
+Billy Bob Thornton

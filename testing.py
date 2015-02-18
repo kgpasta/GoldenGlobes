@@ -7,9 +7,11 @@ Created on Tue Feb 10 14:08:36 2015
 import re
 
 proper_noun_regex = "(?:\s*[A-Z][a-z]+)+"
+quote_regex = '"[^"]+"'
 
-def run_tests(frequency_map, special_table, stop_list, tweet, host_table, nominee_table, award_table):
+def run_tests(frequency_map, special_table, stop_list, tweet, host_table, nominee_table, award_table, jokeTable):
     #word_array = tweet['text'].split()
+    tweet['text'] = tweet['text'].decode('unicode_internal').encode('ascii','ignore')
     
     normal_tweet = tweet['text'].lower()
     if normal_tweet.find("hosting") > -1:
@@ -17,6 +19,11 @@ def run_tests(frequency_map, special_table, stop_list, tweet, host_table, nomine
         
     if normal_tweet.find("demille") > -1:
         findHosts(tweet['text'], special_table)
+        
+    if normal_tweet.find("lol") > -1 or normal_tweet.find("hahaha") > -1:
+        jokes = re.findall(quote_regex, tweet['text'])
+        for joke in jokes:
+            extractFunny(tweet['text'], jokeTable, joke)
         
     matches = re.findall(proper_noun_regex,tweet['text'])
     for match in matches:
@@ -60,7 +67,7 @@ def processHosts(table):
     sortedTable = sorted(table.iterkeys(), key=lambda x: table[x])
     host1 = sortedTable[len(sortedTable) - 1]
     host2 = sortedTable[len(sortedTable) - 2]
-    print "Hosts: " + host1.lower() + " , " + host2.lower()
+    #print "Hosts: " + host1.lower() + " , " + host2.lower()
     hosts = [host1, host2]
     return hosts
     
@@ -68,6 +75,34 @@ def processSpecial(winners,table):
     sortedTable = sorted(table.iterkeys(), key=lambda x: table[x])
     special = sortedTable[len(sortedTable) - 1]
     winners["Cecil B. Demille Award"] = special
+    
+    
+def extractFunny(tweet, table, joke):
+    matches = re.findall(proper_noun_regex, tweet)
+    for match in matches:
+        match = match.strip()
+        if match.find("Golden") > -1 or match.find("Globes") > -1:
+            continue
+        
+        if match in table:
+            if joke in table[match]:
+                table[match][joke] += 1
+            else:
+                table[match][joke] = 1
+        else:
+            table[match] = {}
+            table[match][joke] = 1
+            
+def extractTopJokes(table):
+    threshold = 3
+    jokeFile = open('jokeout.txt','w')
+    for match in table.iterkeys():
+        if table[match].keys > 1:
+            for joke in table[match].iterkeys():
+                if table[match][joke] > threshold:
+                    jokeFile.write(str(match) + " " + str(joke) + "\n\n")
+                    
+    
    
 #def populateTable(tweet, award, nominee_list, table, stop_list):
 #    matches = re.findall(proper_noun_regex, tweet)
