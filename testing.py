@@ -61,7 +61,40 @@ def processHosts(table):
     print "Hosts: " + host1.lower() + " , " + host2.lower()
     hosts = [host1, host2]
     return hosts
-   
+
+def fashionPolice(tweet, table):
+	matches = re.findall(proper_noun_regex, tweet)
+	for match in matches:
+		match = match.strip()
+		if match.find("Golden") > -1 or match.find("Globes") > -1:
+			continue
+		if match in table:
+			table[match] = table[match] + 1
+		else:
+			table[match] = 1
+
+def processFashion(table):
+	sortedTable = sorted(table.iterkeys(), key=lambda x: table[x])
+	print "\nThe Fashion Police voted for:\n"
+	stop_list = [line.strip() for line in open('stoplist.txt')]
+	for i in stop_list:
+		try:
+			sortedTable.remove(i)
+		except ValueError:
+			pass
+	for j in sortedTable:
+		if sum(1 for x in j if x.isupper()) < 2:
+			sortedTable.remove(j)
+	for i in range(1,11):
+		print sortedTable[len(sortedTable)-i]
+
+def run_redCarpet(tweet, red_carpet_table, keyword):
+	normal_tweet = tweet['text'].lower()
+	if normal_tweet.find(keyword) > -1:
+		fashionPolice(tweet['text'], red_carpet_table)
+
+#
+#
 #def populateTable(tweet, award, nominee_list, table, stop_list):
 #    matches = re.findall(proper_noun_regex, tweet)
 #    for match in matches:
@@ -76,6 +109,3 @@ def processHosts(table):
 #            else:
 #                table[award] = {}
 #                table[award][match] = 1
-    
-        
-        
