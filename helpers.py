@@ -25,6 +25,7 @@ def parseNomineeTable(filename):
         else: 
             nominees[award].append(line.strip().lower())
 
+    nominees["Cecil B. Demille Award"] = []
     nomineeFile.close()            
     return nominees
     
