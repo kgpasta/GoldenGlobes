@@ -45,3 +45,31 @@ def parsePresenterList(filename):
             
     presenterFile.close()
     return presenters
+
+#def parseRedCarpet(filename):
+#	redCarpetFile = open(filename)
+#	redCarpet = {}
+#	for line in redCarpetFile:
+#		li=line.strip()
+#		if not li.startswith("#"):
+#			redCarpet[line].append(li)
+#
+#	redCarpetFile.close()
+#	return redCarpet
+#
+#def parseRedCarpet(filename):
+#    redCarpetFile = open(filename)
+#    redCarpet = {}
+#    category = "new"
+#    for line in redCarpetFile:
+#        line = line.strip().encode('ascii','ignore')
+#        if len(line) == 0:
+#            category = "new"
+#        elif category == "new":
+#            redCarpet[line] = []
+#            category = line
+#        else:
+#            redCarpet[category].append(line.lower())
+#            
+#    redCarpetFile.close()
+#    return redCarpet
