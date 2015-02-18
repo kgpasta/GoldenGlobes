@@ -8,12 +8,15 @@ import re
 
 proper_noun_regex = "(?:\s*[A-Z][a-z]+)+"
 
-def run_tests(frequency_map, keyword_list, stop_list, tweet, host_table, nominee_table, award_table):
+def run_tests(frequency_map, special_table, stop_list, tweet, host_table, nominee_table, award_table):
     #word_array = tweet['text'].split()
     
     normal_tweet = tweet['text'].lower()
     if normal_tweet.find("hosting") > -1:
         findHosts(tweet['text'], host_table)
+        
+    if normal_tweet.find("demille") > -1:
+        findHosts(tweet['text'], special_table)
         
     matches = re.findall(proper_noun_regex,tweet['text'])
     for match in matches:
@@ -51,7 +54,6 @@ def processNominees(mention_table,  nominee_table):
                 maxMentions = mention_table[nominee]
                 winner = nominee
         winners[key] = winner
-        print key + " : " + winner
     return winners
         
 def processHosts(table):
@@ -92,9 +94,12 @@ def run_redCarpet(tweet, red_carpet_table, keyword):
 	normal_tweet = tweet['text'].lower()
 	if normal_tweet.find(keyword) > -1:
 		fashionPolice(tweet['text'], red_carpet_table)
-
-#
-#
+    
+def processSpecial(winners,table):
+    sortedTable = sorted(table.iterkeys(), key=lambda x: table[x])
+    special = sortedTable[len(sortedTable) - 1]
+    winners["Cecil B. Demille Award"] = special
+   
 #def populateTable(tweet, award, nominee_list, table, stop_list):
 #    matches = re.findall(proper_noun_regex, tweet)
 #    for match in matches:
