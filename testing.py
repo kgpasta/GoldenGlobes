@@ -6,9 +6,11 @@ Created on Tue Feb 10 14:08:36 2015
 """
 import re
 
+#universal regex expressions
 proper_noun_regex = "(?:\s*[A-Z][a-z]+)+"
 quote_regex = '"[^"]+"'
 
+#Main run tests function, normalizes and takes out stop words
 def run_tests(frequency_map, special_table, stop_list, tweet, host_table, nominee_table, award_table, jokeTable):
     #word_array = tweet['text'].split()
     tweet['text'] = tweet['text'].decode('unicode_internal').encode('ascii','ignore')
@@ -25,6 +27,7 @@ def run_tests(frequency_map, special_table, stop_list, tweet, host_table, nomine
         for joke in jokes:
             extractFunny(tweet['text'], jokeTable, joke)
         
+    #Proper noun frequencies
     matches = re.findall(proper_noun_regex,tweet['text'])
     for match in matches:
         match = str(match.strip().lower())
@@ -39,6 +42,7 @@ def run_tests(frequency_map, special_table, stop_list, tweet, host_table, nomine
 #        else:
 #            frequency_map[word] = 1
         
+#Find name of hosts in tweet, add to table
 def findHosts(tweet, table):
     matches = re.findall(proper_noun_regex, tweet)
     for match in matches:
@@ -50,7 +54,8 @@ def findHosts(tweet, table):
             table[match] = table[match] + 1
         else:
             table[match] = 1
-            
+          
+#Find name of nominee in tweet, add to table
 def processNominees(mention_table,  nominee_table):
     winners = {}
     for key in nominee_table.iterkeys():
@@ -62,7 +67,8 @@ def processNominees(mention_table,  nominee_table):
                 winner = nominee
         winners[key] = winner
     return winners
-        
+     
+#Find most popular host names in Table
 def processHosts(table):
     sortedTable = sorted(table.iterkeys(), key=lambda x: table[x])
     host1 = sortedTable[len(sortedTable) - 1]
@@ -71,6 +77,7 @@ def processHosts(table):
     hosts = [host1, host2]
     return hosts
 
+#Determine fashion awards
 def fashionPolice(tweet, table):
 	matches = re.findall(proper_noun_regex, tweet)
 	for match in matches:
@@ -82,6 +89,7 @@ def fashionPolice(tweet, table):
 		else:
 			table[match] = 1
 
+#Find best fashionable awards from table
 def processFashion(table):
 	sortedTable = sorted(table.iterkeys(), key=lambda x: table[x])
 	print "\nThe Fashion Police voted for:\n"
@@ -97,17 +105,19 @@ def processFashion(table):
 	for i in range(1,11):
 		print sortedTable[len(sortedTable)-i]
 
+#Red carpet tweet parsing
 def run_redCarpet(tweet, red_carpet_table, keyword):
 	normal_tweet = tweet['text'].lower()
 	if normal_tweet.find(keyword) > -1:
 		fashionPolice(tweet['text'], red_carpet_table)
     
+#Process Cecil award winners
 def processSpecial(winners,table):
     sortedTable = sorted(table.iterkeys(), key=lambda x: table[x])
     special = sortedTable[len(sortedTable) - 1]
     winners["Cecil B. Demille Award"] = special
     
-    
+#Extract joke from tweet with lol or haha
 def extractFunny(tweet, table, joke):
     matches = re.findall(proper_noun_regex, tweet)
     for match in matches:
@@ -123,7 +133,8 @@ def extractFunny(tweet, table, joke):
         else:
             table[match] = {}
             table[match][joke] = 1
-            
+        
+#Get the best jokes over a certain threshold
 def extractTopJokes(table):
     threshold = 3
     jokeFile = open('jokeout.txt','w')

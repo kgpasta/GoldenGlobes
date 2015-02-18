@@ -5,6 +5,7 @@ Created on Mon Feb 16 00:41:32 2015
 @author: Kaustubh
 """
 
+#Generate list of nominees
 def parseNominees(nomineeTable):
     nominees = []
     for key in nomineeTable.iterkeys():
@@ -12,6 +13,7 @@ def parseNominees(nomineeTable):
         
     return nominees
     
+#Parse input file to get nominee mappings
 def parseNomineeTable(filename):
     nomineeFile = open(filename)
     nominees = {}
@@ -28,7 +30,8 @@ def parseNomineeTable(filename):
     nominees["Cecil B. Demille Award"] = []
     nomineeFile.close()            
     return nominees
-    
+
+#Parse input file to get presenter mappings
 def parsePresenterList(filename):
     presenterFile = open(filename)
     presenters = {}
@@ -46,6 +49,7 @@ def parsePresenterList(filename):
     presenterFile.close()
     return presenters
 
+#Parse Red carpet awards
 #def parseRedCarpet(filename):
 #	redCarpetFile = open(filename)
 #	redCarpet = {}

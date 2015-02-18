@@ -33,6 +33,7 @@ host_table = {}
 special_table = {}
 joke_table = {}
 
+#Run tests on tweets
 for index, text in enumerate(tweets[0]):
     file.write ("Current Tweet %s: %s" % (index, text))
     testing.run_tests(frequency_map, special_table, stop_list, text, host_table, nominee_list, award_table, joke_table)
